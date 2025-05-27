@@ -6,31 +6,37 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Infrastructure
 
-## Learn More
+- **Main Framework:** Next.js 15, React 19.
+- **Package Manager:** npm.
+- **Version Control:** Git.
+- **Styling:** Sass.
+- **Testing:** Jest and React Testing Library.
+- **Useful Scripts:**
+  - `npm run dev`: development environment.
+  - `npm run build`: production build.
+  - `npm test`, `npm run test:watch`, `npm run test:coverage`: run tests.
+- **Main Configurations:**
+  - `jest.config.js` and `jest.setup.js` for testing.
+  - Import alias configured: `@/` points to `/src`.
 
-To learn more about Next.js, take a look at the following resources:
+## Code
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Main Structure:**
+  - `/src/components`: reusable components.
+    - `/Common`: general components (Button, Modal, Navbar, Sections).
+    - `/Home`: logic and UI specific to the home page.
+  - `/src/pages` or `/src/app`: routes and pages.
+- **Conventions:**
+  - Each component in its own folder with a main file `index.tsx` and styles in `styles.scss`.
+  - Unit tests in `__tests__` next to the component, using the `.test.tsx` suffix.
+  - Use `@testing-library/react` for queries and event simulation.
+  - Library mocks (e.g., Next.js Image) are centralized in `jest.setup.js`.
+  - ![alt text](<Captura de pantalla 2025-05-27 a la(s) 6.29.24 p. m..png>)
+- **Props:** Use explicitly typed props.

@@ -1,0 +1,17 @@
+.navbar {
+  border-bottom: 1px rgba(134, 134, 134, 0.256) solid;
+  padding: .8rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+
+.btn {
+  all: unset;
+  box-sizing: border-box;
+  cursor: pointer;
+}

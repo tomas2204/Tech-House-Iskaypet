@@ -1,0 +1,35 @@
+.steplist {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  white-space: nowrap;
+  box-shadow: 0px 6px 20px -5px #0000003f;
+  font-weight: 700;
+  font-size: 16px;
+  position: sticky;
+  top: 3.5rem;
+  background: #fff;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 1rem;
+  margin: 0px .5rem;
+  list-style: none;
+  min-width: 100px;
+  transition: all .200s;
+  border: 4px solid transparent;
+  cursor: pointer;
+
+  &--active {
+    border-bottom: 4px solid #639605;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    color: #639605;
+  }
+}
